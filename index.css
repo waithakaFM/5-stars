@@ -1,0 +1,462 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;1,500&family=Roboto:ital,wght@0,300;0,900;1,300;1,400;1,500&family=Titillium+Web:ital,wght@0,300;0,600;1,200;1,300;1,600&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* ***
+ sidebars nav styling
+  *** */
+
+/* .sidebar{
+    position: fixed;
+} */
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+
+.main-menu:hover,
+nav.main-menu.expanded {
+  width: 250px;
+  overflow: visible;
+  position: fixed;
+  left: -250px;
+}
+
+.main-menu {
+  background: rgb(5, 68, 104);
+  border-right: 1px solid #e5e5e5;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 60px;
+  overflow: hidden;
+  -webkit-transition: width .05s linear;
+  transition: width .05s linear;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  z-index: 1000;
+}
+
+.main-menu>ul {
+  margin: 7px 0;
+}
+
+.main-menu li {
+  position: relative;
+  display: block;
+  width: 250px;
+}
+
+.main-menu li>a {
+  position: relative;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #ffffff;
+  font-family: arial;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+
+}
+
+.main-menu .nav-icon {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.main-menu .nav-text {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.main-menu>ul.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.no-touch .scrollable.hover {
+  overflow-y: hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+  overflow-y: auto;
+  overflow: visible;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+nav ul,
+nav li {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu li:hover>a,
+nav.main-menu li.active>a,
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus,
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:hover,
+.dropdown-menu>.active>a:focus,
+.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
+.dashboard-page nav.dashboard-menu ul li.active a {
+  color: #fff;
+  background-color: #5fa2db;
+}
+
+.area {
+  float: left;
+  background: #e2e2e2;
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+/* main content */
+main {
+  margin-left: 60px;
+}
+
+.main-menu:hover,
+nav.main-menu.expanded~main {
+  margin-left: 250px;
+}
+
+/* top navbar */
+.wrapper a {
+  text-decoration: none;
+  color: #7f8db0;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.navbar {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar_left .logo a {
+  font-family: 'Titillium Web';
+  font-size: 20px;
+}
+
+.navbar .navbar_right {
+  display: flex;
+}
+
+.navbar .navbar_right img {
+  height: 50px;
+  width: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.navbar .navbar_right .icon_wrap {
+  cursor: pointer;
+}
+
+.navbar .navbar_right {
+  margin-right: 25px;
+}
+
+.navbar .navbar_right.icon_wrap {
+  font-size: 28px;
+}
+
+.navbar .navbar_right .profile,
+.navbar .navbar_right {
+  position: relative;
+}
+
+.navbar .profile .profile_dd {
+  position: absolute;
+  top: 48px;
+  right: -15px;
+  user-select: none;
+  background: #fff;
+  border: 1px solid #c7d8e2;
+  width: 350px;
+  height: auto;
+  display: none;
+  border-radius: 3px;
+  box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.125),
+    -10px -10px 35px rgba(0, 0, 0, 0.125);
+}
+
+.navbar .profile .profile_dd:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 15px;
+  border: 10px solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.navbar .navbar_right .profile .icon_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar_right .profile .icon_wrap .fa {
+  font-size: 40px;
+}
+
+
+.navbar .navbar_right .profile .name {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navbar .navbar_right .icon_wrap:hover,
+.navbar .navbar_right .profile.active .icon_wrap,
+.navbar .navbar_right .icon_wrap {
+  color: rgb(5, 68, 104);
+}
+
+.navbar .profile .profile_dd {
+  width: 225px;
+}
+
+.navbar .profile .profile_dd:before {
+  right: 10px;
+}
+
+.navbar .profile .profile_dd ul li {
+  border-bottom: 1px solid #f1f2f4;
+}
+
+.navbar .profile .profile_dd ul li a {
+  display: block;
+  padding: 15px 35px;
+  position: relative;
+}
+
+.navbar .profile .profile_dd ul li a .picon {
+  display: inline-block;
+  width: 30px;
+}
+
+.navbar .profile .profile_dd ul li a:hover {
+  color: rgb(5, 68, 104);
+  background: #f0f5ff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.navbar .profile .profile_dd ul li.profile_li a:hover {
+  background: transparent;
+  cursor: default;
+  color: #7f8db0;
+}
+
+.navbar .profile .profile_dd ul li .btn {
+  height: 32px;
+  padding: 7px 10px;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  background: rgb(5, 68, 104);
+  width: 125px;
+  margin: 5px auto 15px;
+}
+
+.navbar .profile .profile_dd ul li .btn:hover {
+  background: #6593e4;
+}
+
+.navbar .profile.active .profile_dd {
+  display: block;
+}
+
+.navbar .profile.active .profile_dd .profile_ul .profile_li .profile,
+.navbar .profile.active .profile_dd .Logout,
+.navbar .profile.active .profile_dd .settings {
+  display: flex;
+}
+
+/* title and address */
+
+section .title {
+  margin-top: 65px;
+  background: #054468;
+  color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  text-align: center;
+}
+
+section .title:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+}
+
+section .title .address{
+  color: #7f8db0;;
+}
+
+
+/* container */
+section .datetime{
+  margin-top: 4px;
+  font-size: 25px;
+  padding: 24px;
+  color: #ffffff;
+  background: #444444;
+  box-shadow: 0 0 10px rgba(0, 0 , 0 , 0.25);
+  border-radius: 14px;
+  border-right: 20px rgb(5, 68, 104) solid;
+  /* width: 400px; */
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+.time {
+  font-size: 3em;
+  color: #1fa5f3;
+}
+
+.date {
+  margin-top: 12px;
+  font-size: 1.75em;
+}
+
+/* payment info*/
+section .payment-info{
+  background: #444444;
+  box-shadow: 0 0 10px rgba(0, 0 , 0 , 0.25);
+  color: #ffffff;
+  border-radius: 14px;
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.payment-info h1{
+  font-size: 3em;
+  text-align: center;
+  color: #1fa5f3;
+}
+
+.payment-info ul{
+  font-size: 1.75em;
+  margin-left: 74px;
+}
+
+.payment-info ul li span{
+  color:  #FFD700;
+  font-weight: 500;
+}
+
+section header{
+  background:  #054468;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+/* announcement */
+.announcement{
+  font-family: 'Roboto', sans-serif;
+  font-size: 8px;
+}
+.announcement li {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid gray;
+}
+
+.announcement li .fa {
+  font-size: 4em;
+}
+
+
+.announcement li .info{
+  font-size: 3em;
+}
+
+.announcement li a{
+  text-decoration: none;
+  font-size: 1.75em;
+  margin-left: 60px;
+  font-weight: 400;
+  color: #7f8db0;
+}
+
+.announcement li a:hover {
+  cursor: pointer;
+  color: red;
+  background: #f0f5ff;
+}
